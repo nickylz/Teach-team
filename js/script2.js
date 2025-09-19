@@ -41,17 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // === Eventos modales ===
 
-  // Abrir modal con botones de comprar si no hay sesión
-  botonesComprar.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (!localStorage.getItem('usuario')) {
-        modal.style.display = 'flex';
-        document.getElementById('usuario').focus();
-      }
-    });
-  });
-
   // Cerrar modal login
   cerrar.addEventListener('click', () => modal.style.display = 'none');
 
