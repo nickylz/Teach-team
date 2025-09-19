@@ -52,19 +52,25 @@ document.querySelectorAll('.coleccion-item').forEach((item) => {
   });
 
   // Agregar producto al carrito
-  btn.addEventListener('click', (e) => {
-    e.preventDefault();
+btn.addEventListener('click', (e) => {
+  e.preventDefault();
 
-    let existente = carrito.find(p => p.nombre === nombre);
-    if (existente) {
-      existente.cantidad += cantidad;
-    } else {
-      carrito.push({ nombre, precio, imagen, cantidad: cantidad });
-    }
-    cantidad = 1;
-    cantidadSpan.textContent = 1;
-    actualizarCarrito();
-  });
+  //  Revisa si hay sesión
+  if (!localStorage.getItem('usuario')) {
+    return; // No hace nada con el carrito si no está logueado
+  }
+
+  let existente = carrito.find(p => p.nombre === nombre);
+  if (existente) {
+    existente.cantidad += cantidad;
+  } else {
+    carrito.push({ nombre, precio, imagen, cantidad: cantidad });
+  }
+  cantidad = 1;
+  cantidadSpan.textContent = 1;
+  actualizarCarrito();
+});
+
 });
 
 // ==============================

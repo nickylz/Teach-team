@@ -179,18 +179,21 @@ header {
 
 /* --- BOTONES GENERALES --- */
 .comp-boton {
-  background: #a04f66;
+  background: #d34b56;     
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 10px;
-  transition: 0.3s;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .comp-boton:hover {
-  background: #7a1a0a;
+  background: #b42c37;     
+  transform: scale(1.05);  
 }
+
 
 .cantidad-controles {
   display: flex;
