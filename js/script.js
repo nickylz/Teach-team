@@ -1,11 +1,9 @@
-// ==============================
 // 1. Inicialización del carrito
-// ==============================
 let carrito = [];
 
-// ==============================
+
 // 2. Configuración de productos y botones de cantidad
-// ==============================
+
 document.querySelectorAll('.coleccion-item').forEach((item) => {
   let btn = item.querySelector('.comp-boton'); // Botón de agregar al carrito
   let nombre = item.querySelector('h3').textContent; // Nombre del producto
@@ -79,9 +77,9 @@ btn.addEventListener('click', (e) => {
 
 });
 
-// ==============================
+
 // 3. Actualizar carrito visualmente
-// ==============================
+
 function actualizarCarrito() {
   let carritoDiv = document.getElementById('carrito-items');
   carritoDiv.innerHTML = "";
@@ -118,26 +116,24 @@ function actualizarCarrito() {
   document.getElementById('carrito').style.display = carrito.length ? "block" : "none";
 }
 
-// ==============================
 // 4. Cambiar cantidad de un producto en el carrito
-// ==============================
+
 function cambiarCantidad(i, delta) {
   carrito[i].cantidad += delta;
   if (carrito[i].cantidad <= 0) carrito.splice(i, 1);
   actualizarCarrito();
 }
 
-// ==============================
+
 // 5. Eliminar producto del carrito
-// ==============================
+
 function eliminarProducto(i) {
   carrito.splice(i, 1);
   actualizarCarrito();
 }
 
-// ==============================
 // 6. Funciones de modal de pago
-// ==============================
+
 function abrirModal() {
   document.getElementById('modalPago').style.display = "flex";
   actualizarResumenPago();
@@ -147,9 +143,8 @@ function cerrarModal() {
   document.getElementById('modalPago').style.display = "none";
 }
 
-// ==============================
+
 // 7. Actualizar resumen del pago
-// ==============================
 function actualizarResumenPago() {
   let subtotal = carrito.reduce((sum, prod) => sum + prod.precio * prod.cantidad, 0);
   let envio = 5; // costo fijo de envío
@@ -157,15 +152,78 @@ function actualizarResumenPago() {
   document.getElementById('totalFinal').textContent = "S/" + (subtotal + envio).toFixed(2);
 }
 
-// ==============================
 // 8. Finalizar compra
-// ==============================
+
+// Lista de imágenes para mostrar en el modal de gracias
+const imagenes = [
+  "https://i.pinimg.com/736x/f7/17/32/f71732abaf2c9f2f8003330e1e89a9b0.jpg",
+  "https://i.pinimg.com/736x/99/4f/bf/994fbf99a1728dc3c3b3d526eb873666.jpg",
+  "https://i.pinimg.com/736x/37/e1/b0/37e1b0b70894b2451986df62b75b726b.jpg",
+  "https://i.pinimg.com/736x/6e/79/d4/6e79d48ce42244179361f12cea197182.jpg",
+  "https://i.pinimg.com/736x/72/7e/f8/727ef8b575ec9168c04f12d0246d383a.jpg",
+  "https://i.pinimg.com/736x/99/aa/33/99aa33cccc333.jpg",
+  "https://i.pinimg.com/736x/ee/fb/ef/eefbef3b5c4823a26374a64a91c1df25.jpg",
+  "https://i.pinimg.com/736x/55/cc/55/55cc55eeee555.jpg",
+  "https://i.pinimg.com/736x/66/dd/66/66dd66ffff666.jpg",
+  "https://i.pinimg.com/736x/77/ee/77/77ee77gggg777.jpg",
+  "https://i.pinimg.com/736x/d6/e6/ec/d6e6ec9cec3b91fad25fd328007d92c5.jpg",
+  "https://i.pinimg.com/736x/99/aa/99/99aa99iiii999.jpg"
+];
+
+// Copia barajada para mostrar imágenes sin repetir
+let baraja = [];
+
+// Función para barajar (Fisher-Yates shuffle)
+function barajar(array) {
+  let copia = [...array];
+  for (let i = copia.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [copia[i], copia[j]] = [copia[j], copia[i]];
+  }
+  return copia;
+}
+
 function finalizarCompra() {
-  document.getElementById('modalPago').style.display = "none";
-  document.getElementById('graciasCompra').style.display = "block";
+  // 1. Obtener valores de los campos del modal
+  const nombre = document.getElementById('nombreEnvio')?.value.trim();
+  const direccion = document.getElementById('direccionEnvio')?.value.trim();
+  const metodo = document.getElementById('metodoPago')?.value;
+
+  // 2. Validar que los campos obligatorios estén llenos
+  if (!nombre || !direccion || !metodo) {
+    alert("Por favor completa todos los campos del formulario de pago.");
+    return;
+  }
+
+  // 3. Vaciar carrito
   carrito = [];
   actualizarCarrito();
+
+  // 4. Cerrar modal de pago
+  document.getElementById('modalPago').style.display = 'none';
+
+  // 5. Mostrar modal de gracias con imagen aleatoria
+  const modalGracias = document.getElementById('modalGracias');
+  const imgGracias = document.getElementById('imgGracias');
+
+  // Si la baraja está vacía, se vuelve a barajar todo
+  if (baraja.length === 0) {
+    baraja = barajar(imagenes);
+  }
+
+  // Sacar la siguiente imagen de la baraja
+  const siguienteImg = baraja.pop();
+  imgGracias.src = siguienteImg;
+
+  modalGracias.style.display = 'flex';
+
+  // Cerrar modal manualmente
+  document.getElementById('cerrarGracias').onclick = () => {
+    modalGracias.style.display = 'none';
+  };
+
+  // Cerrar modal automáticamente después de 4 segundos
   setTimeout(() => {
-    document.getElementById('graciasCompra').style.display = "none";
-  }, 3000);
+    modalGracias.style.display = 'none';
+  }, 4000);
 }

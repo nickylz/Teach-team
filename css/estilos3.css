@@ -656,9 +656,7 @@ header {
 }
 
 
-/* ===========================
-   Celulares muy pequeños
-   =========================== */
+/* Celulares muy pequeños */
 @media (max-width: 480px) {
   h1, h2, h3 {
     font-size: 1.3rem;

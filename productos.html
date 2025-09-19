@@ -216,11 +216,7 @@
   <div class="modal-contenido">
     <h2>Finaliza tu compra</h2>
 
-    <div id="resumenPago">
-      <p>Subtotal: <span id="subtotal">S/0.00</span></p>
-      <p>Envío: <span>S/5.00</span></p>
-      <p><strong>Total: <span id="totalFinal">S/0.00</span></strong></p>
-    </div>
+   
 
     <form id="formPago">
       <label>Nombre completo</label>
@@ -237,7 +233,11 @@
         <option value="plin">Plin</option>
         <option value="contraentrega">Pago contra entrega</option>
       </select>
-
+ <div id="resumenPago">
+      <p>Subtotal: <span id="subtotal">S/0.00</span></p>
+      <p>Envío: <span>S/5.00</span></p>
+      <p><strong>Total: <span id="totalFinal">S/0.00</span></strong></p>
+    </div>
       <button type="button" onclick="finalizarCompra()">Finalizar compra</button>
       <button type="button" onclick="cerrarModal()">Cancelar</button>
     </form>
@@ -291,6 +291,18 @@
       <p class="registro-texto">¿Ya tienes cuenta? <a href="#" id="linkVolverLogin">Inicia sesión aquí</a></p>
     </div>
   </div>
+
+<!--  Modal de Gracias -->
+<div id="modalGracias" class="modal">
+  <div class="modal-contenido">
+    <span id="cerrarGracias" class="cerrar">&times;</span>
+    <h2>¡Gracias por tu compra! 🎉</h2>
+    <img id="imgGracias" src="" alt="Gracias" style="max-width:100%; border-radius:12px; margin-top:10px;">
+  </div>
+</div>
+
+
+
 <script src="js/script.js"></script>
   <script src="js/script2.js"></script>
 

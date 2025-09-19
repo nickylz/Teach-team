@@ -371,7 +371,7 @@ header {
   color: #a04f66;
 }
 
-/* === MODAL DE PAGO (NUEVO) === */
+/* === MODAL DE PAGO  === */
 #modalPago .modal-contenido {
   background: #fff8fa;
   border-radius: 20px;
@@ -448,6 +448,25 @@ header {
 }
 #modalPago .modal-contenido .cerrar:hover {
   color: #d8718c;
+}
+
+/* === MODAL DE GRACIAS === */
+#modalGracias .modal-contenido {
+  background: #fff8fa;
+  border-radius: 18px;
+  padding: 30px 25px;
+  width: 380px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(160, 79, 102, 0.2);
+  animation: aparecerModal 0.3s ease-out;
+}
+#modalGracias h2 {
+  color: #a04f66;
+  margin-bottom: 12px;
+}
+#modalGracias p {
+  color: #5f4154;
+  font-size: 0.95rem;
 }
 
 /* Nav */
