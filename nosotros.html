@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOM BOCADO | Nosotros</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/estilos2.css">
+  <link rel="stylesheet" href="css/responsivedesing.css">
+
+  <style>
+
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <header>
+    <div class="header-inner">
+      <nav>
+        <a href="index.html">INICIO</a>
+        <a href="nosotros.html">NOSOTROS</a>
+        <a href="productos.html">PRODUCTOS</a>
+        <a href="novedades.html">NOVEDADES</a>
+        <a href="contacto.html">CONTACTO</a>
+      </nav>
+
+      <div id="userArea"></div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main>
+    <h2>Nuestro equipo</h2>
+
+    <div class="equipo">
+      <img src="https://i.ibb.co/0jzcKN9s/20250805-1131-Cafeter-a-Aesthetic-Amistosa-simple-compose-01k1xh00vke1b99r54a3esvst4.png" alt="Equipo">
+    </div>
+
+    <!-- 🔥 Sección rosa completa -->
+    
+      <div class="intro">
+        Somos un grupo de reposteros apasionados que unen tradición y creatividad para ofrecer experiencias únicas en cada
+        postre.
+      </div>
+
+      <div class="texto-principal">
+        Preparamos nuestros postres con mucho amor, dedicación y cuidado, para que los disfrutes con toda tu familia.
+      </div>
+
+      <div class="texto-secundario">
+        Somos una empresa peruana que convierte momentos familiares en únicos y especiales, elaborando postres con
+        ingredientes naturales y frescos, basados en recetas regionales al estilo casero y preparados con mucho amor y
+        dedicación.
+      </div>
+
+     <section class="fondo-rosa">
+
+      <div class="contenedor-cajas">
+        <div class="caja">
+          <img src="https://i.ibb.co/nqLVqQfR/94691f308486d9f0dff0c5a485f24301.jpg" alt="Misión">
+          <h3>Nuestra Misión</h3>
+          <p>Alegra a nuestros clientes en las celebraciones y momentos más especiales con postres que los llenen de alegría.</p>
+        </div>
+
+        <div class="caja">
+          <img src="https://i.ibb.co/93mLPFDW/20250807-1006-Equipo-Dise-ando-Pastel-remix-01k22h3272ebfbdckenrybya2c.png" alt="Visión">
+          <h3>Nuestra Visión</h3>
+          <p>Ser reconocidos a nivel nacional e internacional como la empresa peruana más confiable en repostería fina.</p>
+        </div>
+
+        <div class="caja">
+          <img src="https://i.ibb.co/6JDHv55w/20250807-1016-Equipo-de-Cafeter-a-Activo-remix-01k22hh36ven6r5y1sc28w3xws.png" alt="Qué buscamos">
+          <h3>¿Qué buscamos?</h3>
+          <p>Impulsar el talento de nuestro equipo, innovar en cada receta y seguir creciendo junto a nuestros clientes.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="simple-footer">
+    <div class="footer-content">
+      <div class="footer-logo-section">
+        <p class="footer-copy">© 2025 BOM BOCADO - Repostería Fina. Todos los derechos reservados.</p>
+      </div>
+      <p>Síguenos en
+        <a href="#">Instagram</a> |
+        <a href="#">Facebook</a> |
+        <a href="#"> Tik Tok</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ======= EL MODAL DE INICIO DE SESIÓN (dentro del body) ======= -->
+  <div id="modalLogin" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <span id="cerrarModal" class="cerrar" aria-label="Cerrar">&times;</span>
+
+      <!-- Reemplaza 'logo.png' por la ruta real de tu logo si quieres mostrarlo -->
+      <img src="https://i.postimg.cc/WzQ2jJjC/lol.png" alt="BOM BOCADO" class="logo-modal">
+
+      <h2 id="modalTitle">¡Qué bueno tenerte de vuelta!</h2>
+      <p>Inicia sesión para continuar con tu compra</p>
+
+      <form id="formLogin">
+        <input type="text" id="usuario" placeholder="Usuario o correo electrónico" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button type="submit" class="btn-login">Iniciar sesión</button>
+      </form>
+
+      <p class="registro-texto">¿No tienes cuenta? <a href="registro.html">Crea una aquí</a></p>
+    </div>
+  </div>
+    <!-- ======= MODAL DE REGISTRO ======= -->
+  <div id="modalRegistro" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitleRegistro">
+      <span id="cerrarRegistro" class="cerrar" aria-label="Cerrar">&times;</span>
+
+      <img src="https://i.postimg.cc/WzQ2jJjC/lol.png" alt="BOM BOCADO" class="logo-modal">
+
+      <h2 id="modalTitleRegistro">Crea tu cuenta</h2>
+      <p>Regístrate para poder comprar tus productos favoritos</p>
+
+      <form id="formRegistro">
+        <input type="text" id="nuevoUsuario" placeholder="Nombre completo" required>
+        <input type="email" id="nuevoEmail" placeholder="Correo electrónico" required>
+        <input type="password" id="nuevoPassword" placeholder="Contraseña" required>
+        <button type="submit" class="btn-login">Registrarme</button>
+      </form>
+
+      <p class="registro-texto">¿Ya tienes cuenta? <a href="#" id="linkVolverLogin">Inicia sesión aquí</a></p>
+    </div>
+  </div>
+  <script src="js/script2.js"></script>
+</body>
+</html>

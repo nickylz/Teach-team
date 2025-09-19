@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - BOM BOCADO</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/estilos2.css">
+  <link rel="stylesheet" href="css/estilos3.css">
+
+</head>
+
+<body>
+  <!-- NAV -->
+  <header>
+    <div class="header-inner">
+      <nav>
+        <a href="index.html">INICIO</a>
+        <a href="nosotros.html">NOSOTROS</a>
+        <a href="productos.html">PRODUCTOS</a>
+        <a href="novedades.html">NOVEDADES</a>
+        <a href="contacto.html">CONTACTO</a>
+      </nav>
+
+      <!-- Contenedor dinámico -->
+      <div id="userArea"></div>
+    </div>
+  </header>
+
+
+  <section aria-label="Contacto">
+    <div class="section-header">
+      <h1>¡Hablemos!</h1>
+      <blockquote id="intro-quote">
+        ¿Tienes alguna pregunta, quieres hacer un pedido especial o simplemente quieres saludarnos? En Bom Bocado,
+        nos encanta escucharte. Contáctanos por el medio que prefieras y con gusto te atenderemos con el amor en cada
+        pedazo que nos caracteriza.
+      </blockquote>
+    </div>
+
+    <div class="layout">
+      <!-- IZQUIERDA: Formulario -->
+      <div class="left-column">
+        <form aria-label="Formulario de contacto" action="#" novalidate>
+          <h2>Escríbenos</h2>
+          <div class="form-field">
+
+            <label for="nombre" style="display:none;">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+
+          <div class="form-field">
+            <label for="telefono" style="display:none;">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono" />
+          </div>
+
+          <div class="form-field">
+            <label for="correo" style="display:none;">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico" required />
+          </div>
+
+          <div class="form-field">
+            <label for="mensaje" style="display:none;">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribenos un mensaje..." required></textarea>
+          </div>
+
+          <div>
+            <button type="submit">Enviar mensaje</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- DERECHA: Información -->
+      <div class="right-column">
+        <div aria-label="Información de contacto y redes sociales">
+          <h3>Información de contacto</h3>
+
+          <div class="contact-item">
+            <div class="icon-wrapper" aria-hidden="true">📍</div>
+            <div>
+              <strong>Ubicación:</strong>
+              <p><a href="https://www.google.com/maps/place/Av.+Primavera+123,+Miraflores,+Lima,+Perú" target="_blank"
+                  rel="noopener">Av. Primavera 123, Miraflores, Lima, Perú</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon-wrapper"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <strong>Teléfono y WhatsApp:</strong>
+              <p>
+                <a href="tel:+51987654321">+51 987 654 321</a> |
+                <a href="https://wa.me/51987654321" target="_blank" rel="noopener">WhatsApp</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon-wrapper"><i class="fas fa-envelope"></i></div>
+            <div>
+              <strong>Correo electrónico:</strong>
+              <p><a href="mailto:pedidos@bombocado.com">pedidos@bombocado.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="icon-wrapper"><i class="fas fa-clock"></i></div>
+            <div>
+              <strong>Horario:</strong>
+              <p>Lun a Vie: 8AM - 8PM | Sáb: 9AM - 7PM | Dom: 9AM - 6PM</p>
+            </div>
+          </div>
+
+          <div class="contact-item" style="flex-direction: column; gap: 8px;">
+            <div class="social-label">No te olvides del delivery gratis por compras mayores a s/. 45.00 <span
+                style="margin-left:6px; font-size:0.9rem;"></span></div>
+            <p class="follow-phrase" id="followPhrase">
+              No te pierdas nuestras <span class="highlight">novedades</span>, <span
+                class="highlight">promociones</span> y los momentos más dulces de nuestro día a día.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mapa -->
+    <div class="map-container" aria-label="Mapa de ubicación">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.9560470969716!2d-77.03926262503623!3d-12.13166258816737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b7e1b4b5a533%3A0xa549043226dcfb18!2sBuenavista%20Caf%C3%A9!5e0!3m2!1ses-419!2spe!4v1753934291804!5m2!1ses-419!2spe"
+        width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <footer class="simple-footer">
+    <div class="footer-content">
+      <div class="footer-logo-section">
+        <p class="footer-copy">© 2025 BOM BOCADO - Repostería Fina. Todos los derechos reservados.</p>
+      </div>
+      <p class="meow">Síguenos en
+        <a href="shshhs.com">Instagram</a> |
+        <a href="sjsjjs.com">Facebook</a> |
+        <a href=""> Tik Tok</a>
+      </p>
+    </div>
+    </div>
+  </footer>
+
+
+  <!-- ======= EL MODAL DE INICIO DE SESIÓN (dentro del body) ======= -->
+  <div id="modalLogin" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <span id="cerrarModal" class="cerrar" aria-label="Cerrar">&times;</span>
+
+      <!-- Reemplaza 'logo.png' por la ruta real de tu logo si quieres mostrarlo -->
+      <img src="https://i.postimg.cc/WzQ2jJjC/lol.png" alt="BOM BOCADO" class="logo-modal">
+
+      <h2 id="modalTitle">¡Qué bueno tenerte de vuelta!</h2>
+      <p>Inicia sesión para continuar con tu compra</p>
+
+      <form id="formLogin">
+        <input type="text" id="usuario" placeholder="Usuario o correo electrónico" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button type="submit" class="btn-login">Iniciar sesión</button>
+      </form>
+
+      <p class="registro-texto">¿No tienes cuenta? <a href="registro.html">Crea una aquí</a></p>
+    </div>
+  </div>
+    <!-- ======= MODAL DE REGISTRO ======= -->
+  <div id="modalRegistro" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitleRegistro">
+      <span id="cerrarRegistro" class="cerrar" aria-label="Cerrar">&times;</span>
+
+      <img src="https://i.postimg.cc/WzQ2jJjC/lol.png" alt="BOM BOCADO" class="logo-modal">
+
+      <h2 id="modalTitleRegistro">Crea tu cuenta</h2>
+      <p>Regístrate para poder comprar tus productos favoritos</p>
+
+      <form id="formRegistro">
+        <input type="text" id="nuevoUsuario" placeholder="Nombre completo" required>
+        <input type="email" id="nuevoEmail" placeholder="Correo electrónico" required>
+        <input type="password" id="nuevoPassword" placeholder="Contraseña" required>
+        <button type="submit" class="btn-login">Registrarme</button>
+      </form>
+
+      <p class="registro-texto">¿Ya tienes cuenta? <a href="#" id="linkVolverLogin">Inicia sesión aquí</a></p>
+    </div>
+  </div>
+    <script>
+    // animación del blockquote y frase al entrar
+    const quote = document.getElementById('intro-quote');
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            observer.unobserve(e.target);
+            const fp = document.getElementById('followPhrase');
+            if (fp) fp.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    if (quote) observer.observe(quote);
+  </script>
+  <script src="js/script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BOM BOCADO | Repostería Fina</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/estilos2.css">
+  <link rel="stylesheet" href="css/responsivedesing.css">
+</head>
+<style>
+
+
+</style>
+<body>
+  <!-- NAV -->
+  <header>
+    <div class="header-inner">
+      <nav>
+        <a href="index.html">INICIO</a>
+        <a href="nosotros.html">NOSOTROS</a>
+        <a href="productos.html">PRODUCTOS</a>
+        <a href="novedades.html">NOVEDADES</a>
+        <a href="contacto.html">CONTACTO</a>
+      </nav>
+
+      <!-- Contenedor dinámico -->
+      <div id="userArea"></div>
+    </div>
+  </header>
+
+
+
+  <main>
+    <section class="ola">
+      <div class="contenido">
+        <div class="imagen">
+          <img src="https://i.postimg.cc/WzQ2jJjC/lol.png" alt="Torta decorada" />
+        </div>
+        <div class="textito">
+          <h1>Postres únicos</h1>
+          <p>En BOM BOCADO creamos repostería fina con amor, ingredientes seleccionados y detalles únicos.
+            Perfectos para regalar o disfrutar en familia.</p>
+          <a href="contacto.html" class="btn-pedido">Hacer pedido</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="colecciones">
+      <h2 class="colecciones-titulo" style="color: #7a1a0a;">Lo más Vendido!</h2>
+      <div class="colecciones-grid">
+        <div class="coleccion-item">
+          <img src="https://i.pinimg.com/1200x/a5/75/8c/a5758c95cfd57b1c1d1292f0a0be02ec.jpg" alt="Chocolate Bar" />
+          <h3>Macaloves - Macarons de Amor</h3>
+          <a href="novedades.html" class="btn-detalles">Ver más →</a>
+           
+        </div>
+        <div class="coleccion-item">
+          <img src="https://i.pinimg.com/736x/d1/8f/da/d18fdaa9cd95c431e6fb77c53cda987d.jpg" alt="Truffles" />
+          <h3>Strawberry Cloud Croissant</h3>
+          <a href="novedades.html" class="btn-detalles"> Ver más →</a>
+        </div>
+        <div class="coleccion-item">
+          <img src="https://i.pinimg.com/1200x/02/a1/00/02a10030eaed821b1525560b18e4b7b8.jpg" alt="Gifts" />
+          <h3>Heartful Bites - Galletas de Amor</h3>
+          <a href="novedades.html" class="btn-detalles">Ver más →</a>
+        </div>
+        <div class="coleccion-item">
+          <img src="https://i.pinimg.com/736x/e0/99/63/e099634012685ea760aa16416f208467.jpg" alt="Best Selling" />
+          <h3>Cherry Kiss Pie</h3>
+          <a href="novedades.html" class="btn-detalles">Ver más →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<footer class="simple-footer">
+  <div class="footer-content">
+    <div class="footer-logo-section">
+      <p class="footer-copy">© 2025 BOM BOCADO - Repostería Fina. Todos los derechos reservados.</p>
+    </div>
+     <p class="#">Síguenos en
+      <a href="#">Instagram</a> |
+      <a href="#">Facebook</a> |
+      <a href=""> Tik Tok</a>
+    </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ======= EL MODAL DE INICIO DE SESIÓN (dentro del body) ======= -->
+  <div id="modalLogin" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <span id="cerrarModal" class="cerrar" aria-label="Cerrar">&times;</span>
+
+      <!-- Reemplaza 'logo.png' por la ruta real de tu logo si quieres mostrarlo -->
+      <img src="https://i.postimg.cc/WzQ2jJjC/lol.png" alt="BOM BOCADO" class="logo-modal">
+
+      <h2 id="modalTitle">¡Qué bueno tenerte de vuelta!</h2>
+      <p>Inicia sesión para continuar con tu compra</p>
+
+      <form id="formLogin">
+        <input type="text" id="usuario" placeholder="Usuario o correo electrónico" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button type="submit" class="btn-login">Iniciar sesión</button>
+      </form>
+
+      <p class="registro-texto">¿No tienes cuenta? <a href="registro.html">Crea una aquí</a></p>
+    </div>
+  </div>
+    <!-- ======= MODAL DE REGISTRO ======= -->
+  <div id="modalRegistro" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitleRegistro">
+      <span id="cerrarRegistro" class="cerrar" aria-label="Cerrar">&times;</span>
+
+      <img src="https://i.postimg.cc/WzQ2jJjC/lol.png" alt="BOM BOCADO" class="logo-modal">
+
+      <h2 id="modalTitleRegistro">Crea tu cuenta</h2>
+      <p>Regístrate para poder comprar tus productos favoritos</p>
+
+      <form id="formRegistro">
+        <input type="text" id="nuevoUsuario" placeholder="Nombre completo" required>
+        <input type="email" id="nuevoEmail" placeholder="Correo electrónico" required>
+        <input type="password" id="nuevoPassword" placeholder="Contraseña" required>
+        <button type="submit" class="btn-login">Registrarme</button>
+      </form>
+
+      <p class="registro-texto">¿Ya tienes cuenta? <a href="#" id="linkVolverLogin">Inicia sesión aquí</a></p>
+    </div>
+  </div>
+
+  <script src="js/script2.js"></script>
+</body>
+
+</html>

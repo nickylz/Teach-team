@@ -1,0 +1,469 @@
+/* ===== MODALES LOGIN / REGISTRO ===== */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0,0,0,0.55);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 28px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: var(--shadow);
+  text-align: center;
+  position: relative;
+  animation: aparecerModal .3s ease-out;
+}
+
+@keyframes aparecerModal {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-content h2 {
+  color: var(--accent-dark);
+  font-size: 1.8rem;
+  margin: 16px 0 8px;
+}
+
+.modal-content p {
+  color: #5f4154;
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+}
+
+.logo-modal {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+/* Botón cerrar */
+.cerrar {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #a04f66;
+  cursor: pointer;
+  transition: color .2s ease;
+}
+.cerrar:hover {
+  color: var(--accent);
+}
+
+/* Inputs del formulario */
+.modal-content input {
+  width: 100%;
+  padding: 14px 16px;
+  margin: 8px 0;
+  border-radius: 12px;
+  border: 1px solid #e8dfe6;
+  font-size: 1rem;
+  background: var(--input-bg);
+  transition: border var(--transition), box-shadow var(--transition);
+}
+.modal-content input:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(216, 113, 140, 0.2);
+}
+
+/* Botón de iniciar sesión en el nav */
+.btn-login-nav {
+  background-color: #d34b56;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.btn-login-nav:hover {
+  background-color: #b42c37;
+  color: white;
+}
+
+/* Botón de cerrar sesión */
+.btn-logout {
+  background-color: #d34b56;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn-logout:hover {
+  background-color: #b42c37;
+}
+
+/* Texto de abajo */
+.registro-texto {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: #5f4154;
+}
+.registro-texto a {
+  color: var(--accent-dark);
+  font-weight: 600;
+  transition: color .2s ease;
+}
+.registro-texto a:hover {
+  color: var(--accent);
+}
+
+/* Header */
+header {
+  background-color: var(--color-claro);
+  padding: 20px 40px;
+  border-bottom: 2px solid #fdf6f7;
+}
+
+/* Contenedor del header */
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Mantener el nav centrado */
+.header-inner nav {
+  margin: 0 auto;
+}
+
+/* UserArea a la derecha */
+#userArea {
+  margin-left: auto;
+}
+/*Color del texto del user*/
+.user-info {
+  color: #000; 
+  font-weight: bold; 
+  margin-right: 10px; 
+}
+
+/* Botones dentro de los modales */
+.btn-login {
+  background-color: #ac566d;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+.btn-login:hover {
+  background-color: #a04c62;
+  transform: scale(1.05);
+}
+
+/* --- BOTONES GENERALES --- */
+.comp-boton {
+  background: #a04f66;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+.comp-boton:hover {
+  background: #7a1a0a;
+}
+
+.cantidad-controles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+.cantidad-controles button {
+  background: #ff83a4;
+  border: none;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.cantidad-controles button:hover {
+  background: #ff5f85;
+}
+
+/* --- CARRITO --- */
+.carrito {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #fff;
+  border: 2px solid #a04f66;
+  padding: 15px;
+  border-radius: 10px;
+  width: 350px;
+  max-height: 500px;
+  overflow-y: auto;
+  display: none;
+  z-index: 1000;
+  color: #a04f66;
+}
+.carrito h3 { 
+  color: #a55f73; 
+  margin-top: 0; 
+  text-align: center;
+}
+.carrito .cerrar-carrito {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #a04f66;
+  cursor: pointer;
+}
+.carrito-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+.carrito-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.carrito-item .info {
+  flex: 1;
+  font-size: 14px;
+}
+.carrito-item .acciones {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.carrito-item .acciones button {
+  background: #d34b56;          /* nuevo color base */
+  border: none;
+  color: #ffffff;                /* texto blanco */
+  padding: 3px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.carrito-item .acciones button:hover {
+  background: #b42c37;           /* tono más oscuro al pasar */
+  transform: scale(1.08);        /* pequeño efecto zoom */
+}
+.carrito-item .acciones .eliminar {
+  background: #c0392b;            /* más rojo para eliminar */
+}
+.carrito-item .acciones .eliminar:hover {
+  background: #a93226;             /* rojo más oscuro al hover */
+  transform: scale(1.08);
+}
+
+
+.total {
+  font-weight: bold;
+  color: #7a1a0a;
+  margin-top: 10px;
+  text-align: center;
+}
+.btn-pagar {
+  background: #d34b56;             /* nuevo color rosado */
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-pagar:hover {
+  background: #b42c37;             /* tono más oscuro */
+  transform: scale(1.05);          /* efecto zoom */
+}
+
+
+/* --- MODAL GENERAL --- */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.modal-contenido {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+.modal-contenido h2, .modal-contenido h3 {
+  color: #7a1a0a;
+}
+.modal-contenido input, 
+.modal-contenido select {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.modal-contenido button {
+  background: #a04f66;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.modal-contenido button:hover {
+  background: #7a1a0a;
+}
+.modal-contenido .cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #a04f66;
+}
+
+/* === MODAL DE PAGO (NUEVO) === */
+#modalPago .modal-contenido {
+  background: #fff8fa;
+  border-radius: 20px;
+  padding: 35px 30px;
+  width: 420px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(160, 79, 102, 0.2);
+  animation: aparecerModal 0.3s ease-out;
+}
+#modalPago .modal-contenido h2 {
+  color: #a04f66;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+#modalPago .modal-contenido p {
+  color: #5f4154;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+#modalPago .modal-contenido label {
+  display: block;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #5f4154;
+  font-weight: 600;
+}
+#modalPago .modal-contenido input,
+#modalPago .modal-contenido select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-top: 5px;
+  border: 1.5px solid #e3cfd7;
+  border-radius: 12px;
+  background: #fff;
+  font-size: 1rem;
+  color: #5f4154;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+#modalPago .modal-contenido input:focus,
+#modalPago .modal-contenido select:focus {
+  border-color: #d8718c;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(216, 113, 140, 0.2);
+}
+#modalPago .modal-contenido button {
+  background: #a04f66;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+#modalPago .modal-contenido button:hover {
+  background: #7a1a0a;
+  transform: scale(1.03);
+}
+#modalPago .modal-contenido .cerrar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #a04f66;
+  transition: color 0.2s ease;
+}
+#modalPago .modal-contenido .cerrar:hover {
+  color: #d8718c;
+}
+
+/* Nav */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+.carrito-btn {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  background: #a04f66;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.carrito-btn:hover {
+  background: #7a1a0a;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog Pastelería</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/estilos2.css">
+  <link rel="stylesheet" href="css/responsivedesing.css">
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <nav>
+      <a href="index.html">INICIO</a>
+      <a href="nosotros.html">NOSOTROS</a>
+      <a href="productos.html">PRODUCTOS</a>
+      <a href="novedades.html">NOVEDADES</a>
+      <a href="contacto.html">CONTACTO</a>
+    </nav>
+
+    <!-- Contenedor dinámico -->
+    <div id="userArea"></div>
+  </div>
+</header>
+
+  <h2 class="colecciones-titulo">Nuevos Productos</h2>
+
+  <section class="colecciones-grid" style="padding: 0 40px 40px 40px;">
+    <article class="coleccion-item">
+      <img src="https://i.pinimg.com/736x/3d/cb/b1/3dcbb16bff6ce4358434039e23993c28.jpg" alt="Artículo 1" />
+      <div class="article-date">50% descuento!!</div>
+      <p>Pastel de vainilla con fresas frescas y crema batida. Perfecto para cualquier celebración.</p>
+      <a href="#" class="btn-detalles">Ver más →</a>
+    </article>
+    <article class="coleccion-item">
+      <img src="https://i.pinimg.com/736x/e7/12/3c/e7123c7cc0469a57855c9cfa818ffde1.jpg" alt="Artículo 2" />
+      <div class="article-date">20% descuento!!</div>
+      <p>Deliciosos bombones de chocolate con forma de corazón, ideales para regalar.</p>
+      <a href="#" class="btn-detalles">Ver más →</a>
+    </article>
+    <article class="coleccion-item">
+      <img src="https://i.pinimg.com/736x/4c/e9/a6/4ce9a654164e9e5c8b829abba145038b.jpg" alt="Artículo 3" />
+      <div class="article-date">Delevery gratis</div>
+      <p>Mini tartas y galletas con mermelada en forma de corazón. Dulzura en cada bocado.</p>
+      <a href="#" class="btn-detalles">Ver más →</a>
+    </article>
+    <article class="coleccion-item">
+      <img src="https://i.pinimg.com/736x/6a/8b/0f/6a8b0f584381944802a3fc3f9656259a.jpg" alt="Artículo 4" />
+      <div class="article-date">+ chocolate gratis</div>
+      <p>Manzanas acarameladas con cobertura brillante y un toque de chocolate extra.</p>
+      <a href="#" class="btn-detalles">Ver más →</a>
+    </article>
+  </section>
+
+  <h2 class="colecciones-titulo">Postres de Temporada</h2>
+
+  <section class="colecciones-grid" style="padding: 0 40px 40px 40px;">
+    <article class="coleccion-item">
+      <img src="https://i.pinimg.com/736x/0a/50/47/0a50472b937f67e9cf7d1bd2f350f42c.jpg" alt="Postre 1" />
+      <div class="article-date">Especial de verano</div>
+      <p>
+        Dulces, suaves y perfectas para un antojo fresco.</p>
+      <a href="#" class="btn-detalles">Ver más →</a>
+    </article>
+    <article class="coleccion-item">
+      <img src="https://i.pinimg.com/1200x/fd/71/7a/fd717a6b2290d97424dbfc2d4c9a17ce.jpg" alt="Postre 2" />
+      <div class="article-date">Solo en invierno</div>
+      <p>Ideal para disfrutar en casa durante los días fríos.</p>
+      <a href="#" class="btn-detalles">Ver más →</a>
+    </article>
+    <article class="coleccion-item">
+      <img src="https://i.pinimg.com/736x/be/92/a5/be92a5f739299ecfc5b9c86ca04fa76b.jpg" alt="Postre 3" />
+      <div class="article-date">Otoño 2025</div>
+      <p>Esponjoso y perfecto para acompañar con café.</p>
+      <a href="#" class="btn-detalles">Ver más →</a>
+    </article>
+    <article class="coleccion-item">
+      <img src="https://i.pinimg.com/1200x/11/13/f1/1113f1f60919fac7f5bdf63a6c4bca9c.jpg" alt="Postre 4" />
+      <div class="article-date">Primavera fresca</div>
+      <p>Ligero, afrutado y lleno de color para la temporada.</p>
+      <a href="#" class="btn-detalles">Ver más →</a>
+    </article>
+  </section>
+
+  <footer class="simple-footer">
+    <div class="footer-content">
+      <div class="footer-logo-section">
+        <p class="footer-copy">© 2025 BOM BOCADO - Repostería Fina. Todos los derechos reservados.</p>
+      </div>
+      <p class="#">Síguenos en
+        <a href="#">Instagram</a> |
+        <a href="#">Facebook</a> |
+        <a href=""> Tik Tok</a>
+      </p>
+    </div>
+    </div>
+  </footer>
+
+  <!-- ======= EL MODAL DE INICIO DE SESIÓN (dentro del body) ======= -->
+  <div id="modalLogin" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <span id="cerrarModal" class="cerrar" aria-label="Cerrar">&times;</span>
+
+      <!-- Reemplaza 'logo.png' por la ruta real de tu logo si quieres mostrarlo -->
+      <img src="https://i.postimg.cc/WzQ2jJjC/lol.png" alt="BOM BOCADO" class="logo-modal">
+
+      <h2 id="modalTitle">¡Qué bueno tenerte de vuelta!</h2>
+      <p>Inicia sesión para continuar con tu compra</p>
+
+      <form id="formLogin">
+        <input type="text" id="usuario" placeholder="Usuario o correo electrónico" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button type="submit" class="btn-login">Iniciar sesión</button>
+      </form>
+
+      <p class="registro-texto">¿No tienes cuenta? <a href="registro.html">Crea una aquí</a></p>
+    </div>
+  </div>
+    <!-- ======= MODAL DE REGISTRO ======= -->
+  <div id="modalRegistro" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitleRegistro">
+      <span id="cerrarRegistro" class="cerrar" aria-label="Cerrar">&times;</span>
+
+      <img src="https://i.postimg.cc/WzQ2jJjC/lol.png" alt="BOM BOCADO" class="logo-modal">
+
+      <h2 id="modalTitleRegistro">Crea tu cuenta</h2>
+      <p>Regístrate para poder comprar tus productos favoritos</p>
+
+      <form id="formRegistro">
+        <input type="text" id="nuevoUsuario" placeholder="Nombre completo" required>
+        <input type="email" id="nuevoEmail" placeholder="Correo electrónico" required>
+        <input type="password" id="nuevoPassword" placeholder="Contraseña" required>
+        <button type="submit" class="btn-login">Registrarme</button>
+      </form>
+
+      <p class="registro-texto">¿Ya tienes cuenta? <a href="#" id="linkVolverLogin">Inicia sesión aquí</a></p>
+    </div>
+  </div>
+  <script src="js/script2.js"></script>
+</body>
+</html>
