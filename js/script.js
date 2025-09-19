@@ -161,13 +161,13 @@ const imagenes = [
   "https://i.pinimg.com/736x/37/e1/b0/37e1b0b70894b2451986df62b75b726b.jpg",
   "https://i.pinimg.com/736x/6e/79/d4/6e79d48ce42244179361f12cea197182.jpg",
   "https://i.pinimg.com/736x/72/7e/f8/727ef8b575ec9168c04f12d0246d383a.jpg",
-  "https://i.pinimg.com/736x/99/aa/33/99aa33cccc333.jpg",
+  "https://i.pinimg.com/736x/a8/64/bd/a864bd2854ce4d2516c42d2b8caf43d0.jpg",
   "https://i.pinimg.com/736x/ee/fb/ef/eefbef3b5c4823a26374a64a91c1df25.jpg",
-  "https://i.pinimg.com/736x/55/cc/55/55cc55eeee555.jpg",
-  "https://i.pinimg.com/736x/66/dd/66/66dd66ffff666.jpg",
-  "https://i.pinimg.com/736x/77/ee/77/77ee77gggg777.jpg",
-  "https://i.pinimg.com/736x/d6/e6/ec/d6e6ec9cec3b91fad25fd328007d92c5.jpg",
-  "https://i.pinimg.com/736x/99/aa/99/99aa99iiii999.jpg"
+  "https://i.pinimg.com/736x/bc/1f/b5/bc1fb5d2764a43477649cac888960b12.jpg",
+  "https://i.pinimg.com/736x/00/c5/6e/00c56e6710ed39eb4723d38bd5242b6c.jpg",
+  "https://i.pinimg.com/736x/a9/24/ee/a924ee07c8e622aa1f9e4ef4f5c10be7.jpg",
+  "https://i.pinimg.com/736x/43/43/eb/4343eb103ae09dc6f55539528edbbf02.jpg",
+  "https://i.pinimg.com/1200x/e1/c4/7d/e1c47d189f0a84b596562db88bf60e29.jpg"
 ];
 
 // Copia barajada para mostrar imágenes sin repetir
