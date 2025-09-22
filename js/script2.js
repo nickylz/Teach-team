@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Botones comprar (para abrir modal si no hay sesión)
   const botonesComprar = document.querySelectorAll('.comp-boton');
 
-  // 🔹 Función que pinta el header según sesión
+  // Función que pinta el header según sesión
   function renderUserArea() {
     const user = localStorage.getItem('usuario');
     if (user) {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // 🔹 Mostrar header según sesión al cargar
+  // Mostrar header según sesión al cargar
   renderUserArea();
 
   // === Eventos modales ===

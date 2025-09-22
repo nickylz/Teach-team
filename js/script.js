@@ -53,7 +53,7 @@ document.querySelectorAll('.coleccion-item').forEach((item) => {
 btn.addEventListener('click', (e) => {
   e.preventDefault();
 
-  // ✅ Validar sesión
+  // Validar sesión
   if (!localStorage.getItem('usuario')) {
     // Abrir modal de login si no hay sesión
     const modal = document.getElementById('modalLogin');
@@ -62,7 +62,7 @@ btn.addEventListener('click', (e) => {
     return; // no mete al carrito hasta que inicie sesión
   }
 
-  // ✅ Si hay sesión → mete producto al carrito
+  // Si hay sesión → mete producto al carrito
   let existente = carrito.find(p => p.nombre === nombre);
   if (existente) {
     existente.cantidad += cantidad;

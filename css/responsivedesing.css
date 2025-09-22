@@ -41,9 +41,7 @@ header {
 }
 
 
-/* ===========================
-   Tablets (pantallas medianas)
-   =========================== */
+/* Tablets (pantallas medianas) */
 @media (max-width: 1024px) {
   .contenido {
     flex-direction: column;
@@ -69,20 +67,18 @@ header {
 }
 
 
-/* ===========================
-   Celulares (pantallas pequeñas)
-   =========================== */
+/* Celulares (pantallas pequeñas) */
 @media (max-width: 768px) {
   /* Mostrar botón hamburguesa */
   .nav-toggle {
     display: block;
   }
 
-  /* Ocultar nav inicialmente y hacerlo tipo panel lateral */
+  /* Ocultar nav */
   nav {
     position: absolute;
     top: 70px;
-    left: 20px;   /* ahora sale desde la izquierda */
+    left: 20px;  
     width: 220px;
     background: #fff7f5;
     flex-direction: column;
@@ -152,9 +148,7 @@ header {
 }
 
 
-/* ===========================
-   Celulares muy pequeños
-   =========================== */
+/* Celulares muy pequeños */
 @media (max-width: 480px) {
   h1, h2, h3 {
     font-size: 1.3rem;
@@ -171,6 +165,6 @@ header {
 
   nav {
     width: 180px;
-    left: 15px;  /* se ajusta también para móviles chicos */
+    left: 15px;  
   }
 }
