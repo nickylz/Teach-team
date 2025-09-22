@@ -17,12 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Función que pinta el header según sesión
   function renderUserArea() {
-    const user = localStorage.getItem('usuario');
-    if (user) {
-      userArea.innerHTML = `
-        <span class="user-info"> ${user}</span>
-        <button id="btnCerrarSesion" class="btn-logout">Cerrar sesión</button>
-      `;
+   const user = localStorage.getItem('usuario');
+if (user) {
+  // Si tiene un @, corta y muestra solo lo de antes
+  const mostrarNombre = user.includes('@') ? user.split('@')[0] : user;
+
+  userArea.innerHTML = `
+    <span class="user-info">${mostrarNombre}</span>
+    <button id="btnCerrarSesion" class="btn-logout">Cerrar sesión</button>
+  `;
+
       document.getElementById('btnCerrarSesion').addEventListener('click', () => {
         localStorage.removeItem('usuario');
         renderUserArea();

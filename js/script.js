@@ -156,18 +156,18 @@ function actualizarResumenPago() {
 
 // Lista de imágenes para mostrar en el modal de gracias
 const imagenes = [
-  "https://i.pinimg.com/736x/f7/17/32/f71732abaf2c9f2f8003330e1e89a9b0.jpg",
-  "https://i.pinimg.com/736x/99/4f/bf/994fbf99a1728dc3c3b3d526eb873666.jpg",
-  "https://i.pinimg.com/736x/37/e1/b0/37e1b0b70894b2451986df62b75b726b.jpg",
-  "https://i.pinimg.com/736x/6e/79/d4/6e79d48ce42244179361f12cea197182.jpg",
-  "https://i.pinimg.com/736x/72/7e/f8/727ef8b575ec9168c04f12d0246d383a.jpg",
-  "https://i.pinimg.com/736x/a8/64/bd/a864bd2854ce4d2516c42d2b8caf43d0.jpg",
-  "https://i.pinimg.com/736x/ee/fb/ef/eefbef3b5c4823a26374a64a91c1df25.jpg",
-  "https://i.pinimg.com/736x/bc/1f/b5/bc1fb5d2764a43477649cac888960b12.jpg",
-  "https://i.pinimg.com/736x/00/c5/6e/00c56e6710ed39eb4723d38bd5242b6c.jpg",
-  "https://i.pinimg.com/736x/a9/24/ee/a924ee07c8e622aa1f9e4ef4f5c10be7.jpg",
-  "https://i.pinimg.com/736x/43/43/eb/4343eb103ae09dc6f55539528edbbf02.jpg",
-  "https://i.pinimg.com/1200x/e1/c4/7d/e1c47d189f0a84b596562db88bf60e29.jpg"
+  "https://i.postimg.cc/SsLjzJ0b/1.png",
+  "https://i.postimg.cc/50zK5WpV/2.png",
+  "https://i.postimg.cc/nrtR0Sw-Q/3.png",
+  "https://i.postimg.cc/R0HLyQt1/4.png",
+  "https://i.postimg.cc/Jz9bNDFs/5.png",
+  "https://i.postimg.cc/6p7r4LMs/6.png",
+  "https://i.postimg.cc/65hWVD1n/7.png",
+  "https://i.postimg.cc/tT0GG5M9/8.png",
+  "https://i.postimg.cc/JhHCFgKT/9.png",
+  "https://i.postimg.cc/DzLYLKxK/10.png",
+  "https://i.postimg.cc/DZhpcYN4/11.png",
+  "https://i.postimg.cc/VkMFHWnq/12.png"
 ];
 
 // Copia barajada para mostrar imágenes sin repetir
